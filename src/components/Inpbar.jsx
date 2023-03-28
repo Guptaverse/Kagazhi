@@ -8,7 +8,7 @@ import AddIcon from '@mui/icons-material/Add';
 const Inpbar = () => {
   const windowWidth = useRef(window.innerWidth);
   return (
-      <div style={{marginTop : "2%"}}>
+      <div style={{marginTop : "2%",display : "flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
         <TextField
           variant="outlined"
           placeholder="Write awesome things about yourself"
@@ -16,10 +16,24 @@ const Inpbar = () => {
           rows={3}
           rowsMax={10}
           sx={{
-            width: (windowWidth.current)/3
+            width: (windowWidth.current)/3,
+            backgroundColor: "#ccc76e",
+            "& .MuiInputBase-root": {
+              color: '#ffff'},
+              "& label.Mui-focused" :{
+                color: "#ccc76e",
+              },
+              "& .MuiOutlinedInput-root" :{
+                "&.Mui-focused fieldset" :{
+                  borderWidth:"none",
+                  borderColor: "#ccc76e",
+                  borderRadius:"10px",
+                }
+              }
+            
         }}
         />
-        <Fab color="primary" style={{marginTop:"17px",marginLeft:"5px",boxShadow : "none"}} aria-label="add">
+        <Fab style={{marginTop:"17px",marginLeft:"5px",boxShadow : "none",backgroundColor:"#ccc76e",color:"white"}} aria-label="add">
           <AddIcon />
         </Fab>
   </div>
