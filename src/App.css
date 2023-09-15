@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  background-color: #282c34;
+}
+.created-div{
+  width: fit-content;
+  height: fit-content;
+  /* background-color: #61dafb; */
+  margin: 3px;
+  padding: 5px;
+  color: aliceblue;
+  box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+}
